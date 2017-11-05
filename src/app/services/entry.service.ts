@@ -8,8 +8,9 @@ import axios from 'axios';
 @Injectable()
 export class EntryService {
   private host = 'http://localhost:3000';
+  private namespace = 'api';
   private apiVersion = 'v1';
-  private entryApi = `${this.host}/${this.apiVersion}/entries`;
+  private entryApi = `${this.host}/${this.namespace}/${this.apiVersion}/entries`;
 
   constructor(private http: Http) { }
 
